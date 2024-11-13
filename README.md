@@ -5,13 +5,12 @@ In the docker file
 ---------------------------------------------------------------------------------------------------------
 #For Docker code
 ---------------------------------------------------------------------------------------------------------
-USE THE BELOW CODE
----------------------------------------------------------------------------------------------------------
 FROM python <br>
 WORKDIR /app <br>
 COPY . /app <br>
 RUN pip install --no-cache-dir -r requirements.txt <br>
 CMD ["python3","app.py"] <br>
+---------------------------------------------------------------------------------------------------------
 
 Write the above code as it is 
 Make sure your app.py is the name of the file you want to be using for the project.
@@ -19,8 +18,11 @@ Make sure your app.py is the name of the file you want to be using for the proje
 And in the requirements.txt you can save the code like the way you want
 
 
+---------------------------------------------------------------------------------------------------------
 To make a docker image
+
 Write the following code
+---------------------------------------------------------------------------------------------------------
 
 TO BUILD THE IMAGE
 docker build -f path_to_your_dockerfile -t myfirstpythonappp .
