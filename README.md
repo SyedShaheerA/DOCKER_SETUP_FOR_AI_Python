@@ -13,7 +13,6 @@ COPY . /app
 RUN pip install --no-cache-dir -r requirements.txt
 CMD ["python3","app.py"]
 
----------------------------------------------------------------------------------------------------------
 Write the above code as it is 
 Make sure your app.py is the name of the file you want to be using for the project.
 
