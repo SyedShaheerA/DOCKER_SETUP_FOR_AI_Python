@@ -1,0 +1,20 @@
+FROM python:3.11-slim
+WORKDIR /app
+COPY . /app
+
+
+RUN pip install --upgrade pip>=19.0
+
+
+RUN pip install --no-cache-dir -r requirements.txt
+
+RUN pip install transformers
+RUN pip install nltk
+RUN pip install --upgrade pip setuptools wheel
+# Step 5: Install spaCy and the English model
+RUN pip install spacy
+RUN python -m spacy download en_core_web_sm
+
+
+
+CMD ["python3","app.py"]
